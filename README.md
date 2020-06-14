@@ -15,6 +15,8 @@ This is a practice project in designing and building a Docker + React app for SF
 
 ## Resources
 
+### React Drag and Drop
+
 - [Drag and Drop Tutorial with React DnD (Trello Clone)](https://www.youtube.com/watch?v=aK2PD_REk7A)
 
 - [[ReactJS] Kanban Board](https://www.youtube.com/watch?v=pit07rnM9wM)
@@ -26,4 +28,15 @@ This is a practice project in designing and building a Docker + React app for SF
   + [react-dnd](https://github.com/react-dnd/react-dnd)
   + [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
 
-- [react-beautiful-dnd official tutorial](https://egghead.io/lessons/react-course-introduction-beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)
+- *[react-beautiful-dnd official tutorial](https://egghead.io/lessons/react-course-introduction-beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)*
+
+### Web App Design
+
+- [how-to-make-a-web-app | budibase](https://www.budibase.com/blog/how-to-make-a-web-app/)
+
+- []()
+
+
+### Software Development Kanban
+
+![Wiki kanban in software dev](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)
