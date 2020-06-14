@@ -39,4 +39,4 @@ This is a practice project in designing and building a Docker + React app for SF
 
 ### Software Development Kanban
 
-[![Wiki kanban in software dev][https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png]][https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png]
+[![Wiki kanban in software dev](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)
