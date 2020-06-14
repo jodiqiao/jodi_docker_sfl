@@ -28,7 +28,7 @@ This is a practice project in designing and building a Docker + React app for SF
   + [react-dnd](https://github.com/react-dnd/react-dnd)
   + [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
 
-- *[react-beautiful-dnd official tutorial](https://egghead.io/lessons/react-course-introduction-beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)*
+- **[react-beautiful-dnd official tutorial](https://egghead.io/lessons/react-course-introduction-beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd)**
 
 ### Web App Design
 
@@ -39,4 +39,4 @@ This is a practice project in designing and building a Docker + React app for SF
 
 ### Software Development Kanban
 
-![Wiki kanban in software dev](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)
+[![Wiki kanban in software dev][https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png]][https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png]
