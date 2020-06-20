@@ -1,7 +1,7 @@
 # README
 
 ## Notebeans
-This is a practice project in designing and building a Docker + React app for SFL. A kitten-themed
+This is a practice project in designing and building a Docker + React app for SFL.
 
 ## Project Status
 
@@ -34,7 +34,7 @@ This is a practice project in designing and building a Docker + React app for SF
 
 - [how-to-make-a-web-app | budibase](https://www.budibase.com/blog/how-to-make-a-web-app/)
 
-- []()
+- [Build a beautiful, draggable kanban board with react-beautiful-dnd](https://www.youtube.com/watch?v=Vqa9NMzF3wc&t=37s)
 
 
 ### Software Development Kanban
