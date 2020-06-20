@@ -11,17 +11,48 @@ const columnsFromBackend = {
     [uuid()]: {
       name: 'Backlog',
       items: itemsFromBackend
+    },
+    [uuid()]: {
+      name: 'Planning',
+      items: []
+    },
+    [uuid()]: {
+      name: 'In Progress',
+      items: []
+    },
+    [uuid()]: {
+      name: 'Completed',
+      items: []
     }
-}
+};
+
+/* draggable function*/
+const onDragEnd = (result, columns, setColumns) => {
+  if(!result.destination) return; /* do nothing if dragged note outside of columns*/
+  const { source, destination } = result;
+  const column = columns[source.droppableId];
+  const copiedItems = [...column.items];
+  const [removed] = copiedItems.splice(source.index, 1);
+  copiedItems.splice(destination.index, 0, removed);
+  setColumns({
+    ...columns,
+    [source.droppableId]: {
+      ...column,
+      items: copiedItems
+    }
+  })
+};
 
 function App() {
   const [columns, setColumns] = useState(columnsFromBackend);
   return (
     <div style={{ display:'flex', justifyContent: 'center', height: '100%' }}>
-      <DragDropContext onDropEnd={result => console.log(result)}>
+      <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
         {Object.entries(columns).map(([id, column]) => {
           return (
-            <Droppable droppableId={id}>
+            <div>
+              <h2>{column.name}</h2>
+            <Droppable droppableId={id} key={id}>
               {(provided, snapshot) => {
                 return (
                   <div 
@@ -54,16 +85,18 @@ function App() {
                               >
                                 {item.content}
                               </div>
-                            )
+                            );
                           }}
                         </Draggable>
-                      )
+                      );
                     })}
+                    {provided.placeholder}
                   </div>
-                )
+                );
               }}
             </Droppable>
-          )
+            </div>
+          );
         })}
       </DragDropContext>
     </div>
