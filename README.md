@@ -38,6 +38,13 @@ yarn start
 
 - **[reactjs drag-drop examples](https://reactjsexample.com/tag/drag-drop/)**
 
+### Add New Notes
+
+- [React Dynamically Create Drag and Drop Containers
+](https://www.youtube.com/watch?v=7Lt1l3YGqYg)
+
+Add droppable rows with the click of a button.
+
 ### Web App Design
 
 - [how-to-make-a-web-app | budibase](https://www.budibase.com/blog/how-to-make-a-web-app/)
