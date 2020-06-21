@@ -43,7 +43,7 @@ yarn start
 - [React Dynamically Create Drag and Drop Containers
 ](https://www.youtube.com/watch?v=7Lt1l3YGqYg)
 
-Add droppable rows with the click of a button.
+This tutorial added droppable rows with the click of a button. I need to add draggables in multiple columns with multiple buttons (ideally). Start first with one button in Backlog.
 
 ### Web App Design
 

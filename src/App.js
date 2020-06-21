@@ -27,7 +27,7 @@ const columnsFromBackend = {
     }
 };
 
-/* draggable function*/
+/* draggable function, for deleting and updating columns when dragged */
 const onDragEnd = (result, columns, setColumns) => {
   if(!result.destination) return; /* do nothing if dragged note outside of columns*/
   const { source, destination } = result;
@@ -68,6 +68,7 @@ function App() {
   const [columns, setColumns] = useState(columnsFromBackend);
   return (
 
+    /* Navbar */
     <div className="App">
     <ReactBootStrap.Navbar bg="danger" variant="dark">
       <ReactBootStrap.Navbar.Brand href="#home">
@@ -82,6 +83,7 @@ function App() {
       </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>
 
+    {/* This is the whole kanban */}
     <div style={{ display:'flex', justifyContent: 'center', height: '100%', marginTop: '30px' }}>
 
       <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
@@ -90,6 +92,7 @@ function App() {
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
               <h2>{column.name}</h2>
               <div style={{margin: 8}}>
+          
             <Droppable droppableId={id} key={id}>
               {(provided, snapshot) => {
                 return (
