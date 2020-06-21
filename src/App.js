@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { uuid } from 'uuidv4';
+import * as ReactBootStrap from "react-bootstrap";
 
 const itemsFromBackend = [
   { id: uuid(), content: 'First task' },
@@ -66,7 +67,23 @@ const onDragEnd = (result, columns, setColumns) => {
 function App() {
   const [columns, setColumns] = useState(columnsFromBackend);
   return (
-    <div style={{ display:'flex', justifyContent: 'center', height: '100%' }}>
+
+    <div className="App">
+    <ReactBootStrap.Navbar bg="danger" variant="dark">
+      <ReactBootStrap.Navbar.Brand href="#home">
+        <img
+          alt=""
+          src="/logo.svg"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{' '}
+        Notebeans • SFL
+      </ReactBootStrap.Navbar.Brand>
+    </ReactBootStrap.Navbar>
+
+    <div style={{ display:'flex', justifyContent: 'center', height: '100%', marginTop: '30px' }}>
+
       <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
         {Object.entries(columns).map(([id, column]) => {
           return (
@@ -80,7 +97,7 @@ function App() {
                   {...provided.droppableProps}
                   ref={provided.innerRef}
                   style={{
-                    background: snapshot.isDraggingOver ? 'lightblue' : 'lightgrey',
+                    background: snapshot.isDraggingOver ? '#ffe2c9' : '#fff5ed',
                     padding: 4,
                     width: 250,
                     minHeight:500
@@ -99,7 +116,7 @@ function App() {
                                 padding:16,
                                 margin: '0 0 8px 0',
                                 minHeight: '50px',
-                                backgroundColor: snapshot.isDragging ? '#263B4A' : '#456C86',
+                                backgroundColor: '#eb9898',
                                 color: 'white',
                                 ...provided.draggableProps.style
                               }}
@@ -121,6 +138,7 @@ function App() {
           );
         })}
       </DragDropContext>
+    </div>
     </div>
   );
 }
