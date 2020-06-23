@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { uuid } from 'uuidv4';
 import * as ReactBootStrap from "react-bootstrap";
+import './App.css';
 
 const itemsFromBackend = [
-  { id: uuid(), content: 'First task' },
-  { id: uuid(), content: 'Second task' }
+  { id: uuid(), content: ' ' },
+  { id: uuid(), content: ' ' }
 ];
 
 const columnsFromBackend = {
@@ -63,6 +64,7 @@ const onDragEnd = (result, columns, setColumns) => {
   })
   }
 };
+
 
 function App() {
   const [columns, setColumns] = useState(columnsFromBackend);
@@ -124,6 +126,13 @@ function App() {
                                 ...provided.draggableProps.style
                               }}
                               >
+                                {/* Text field */}
+                                <form id="to-do-form">
+                                  <input type = "text" placeholder = "Enter Text"/>
+                                  <button type="submit">
+                                    Add
+                                  </button>
+                                </form>
                                 {item.content}
                               </div>
                             );
@@ -145,5 +154,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

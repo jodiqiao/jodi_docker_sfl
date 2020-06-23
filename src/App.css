@@ -1,0 +1,36 @@
+html, body, #root {
+    height: 100%;
+}
+
+body {
+margin: 0;
+background-color: #f5f5f5;
+font-family: 'Roboto', sans-serif;
+}
+
+
+#to-do-form {
+    /*background-color: yellow;
+    width: 50px;
+    height: 50px;
+    padding: 0 20px;
+    */
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#to-do-form input::placeholder {
+    color: #919191;
+}
+
+#to-do-form input:focus, #to-do-form button:focus {
+    outline: none;
+}
+
+#to-do-form button {
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
