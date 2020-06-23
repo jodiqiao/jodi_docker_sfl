@@ -45,6 +45,10 @@ yarn start
 
 This tutorial added droppable rows with the click of a button. I need to add draggables in multiple columns with multiple buttons (ideally). Start first with one button in Backlog.
 
+-[React for Beginners - Build a Todo-List App](https://www.youtube.com/watch?v=nUl5QLkVdvU)
+
+Add/delete local storage. Also separates component into different .js files.
+
 ### Web App Design
 
 - [how-to-make-a-web-app | budibase](https://www.budibase.com/blog/how-to-make-a-web-app/)
