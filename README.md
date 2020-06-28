@@ -4,10 +4,16 @@
 This is a practice project in designing and building a Docker + React app for SFL.
 
 ## Project Status
+- Designing navbar logo in Adobe illustrator
+- Working on adding, editing, deleting text + local storage
 
 ## Project Problems
 
 ## Project Screenshots
+
+![navbar logo sketches](designs/icons_row_sketches.PNG)
+
+![chosen sketches](designs/chosen_raw.JPG)
 
 ## Installation and Setup
 
