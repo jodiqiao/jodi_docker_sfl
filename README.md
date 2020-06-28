@@ -60,8 +60,3 @@ Add/delete local storage. Also separates component into different .js files.
 - [how-to-make-a-web-app | budibase](https://www.budibase.com/blog/how-to-make-a-web-app/)
 
 - [Build a beautiful, draggable kanban board with react-beautiful-dnd](https://www.youtube.com/watch?v=Vqa9NMzF3wc&t=37s)
-
-
-### Software Development Kanban
-
-[![Wiki kanban in software dev](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)](https://en.wikipedia.org/wiki/Kanban_board#/media/File:Sample_Kanban_Board.png)
