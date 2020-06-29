@@ -19,6 +19,8 @@ This is a practice project in designing and building a Docker + React app for SF
 
 ![adobe illustrator progress 2](designs/adobe_progress_2.png)
 
+![adobe illustrator progress 3](designs/adobe_progress_3.png)
+
 ## Installation and Setup
 
 ```bash
