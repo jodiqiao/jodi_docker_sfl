@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { uuid } from 'uuidv4';
+import TodoForm from "./TodoForm";
+import TodoList from "./TodoList";
 
 const itemsFromBackend = [
   { id: uuid(), content: ' ' },
@@ -65,6 +67,13 @@ const onDragEnd = (result, columns, setColumns) => {
 
 function Kanban() {
     const [columns, setColumns] = useState(columnsFromBackend);
+    const [todos, setTodos] = useState([]);
+
+    function addTodo(todo) {
+      // adds new todo to beginning of todos array
+      setTodos([todo, ...todos]);
+    }
+
     return (
       <div style={{
         display:'flex', 
@@ -114,12 +123,8 @@ function Kanban() {
                                 }}
                                 >
                                   {/* Text field */}
-                                  <form id="to-do-form">
-                                    <input type = "text" placeholder = "Enter Text"/>
-                                    <button type="submit">
-                                      Add
-                                    </button>
-                                  </form>
+                                  <TodoForm addTodo={addTodo} />
+                                  <TodoList todos={todos} />
                                   {item.content}
                                 </div>
                               );

@@ -5,6 +5,7 @@ import Kanban from "./components/Kanban";
 import NavBar from "./components/NavBar";
 
 function App() {
+
   return (
     /* Navbar */
     <div>
