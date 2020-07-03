@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { uuid } from 'uuidv4';
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 
+
 const itemsFromBackend = [
   { id: uuid(), content: ' ' },
   { id: uuid(), content: ' ' }
 ];
+
+const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 
 const columnsFromBackend = {
     [uuid()]: {
@@ -19,7 +22,7 @@ const columnsFromBackend = {
       items: []
     },
     [uuid()]: {
-      name: 'In Progress',
+    name: 'In Progress',
       items: []
     },
     [uuid()]: {
@@ -51,7 +54,7 @@ const onDragEnd = (result, columns, setColumns) => {
       }
     })
   } else {
-  const column = columns[source.droppableId];
+    const column = columns[source.droppableId];
   const copiedItems = [...column.items];
   const [removed] = copiedItems.splice(source.index, 1);
   copiedItems.splice(destination.index, 0, removed);
@@ -68,6 +71,18 @@ const onDragEnd = (result, columns, setColumns) => {
 function Kanban() {
     const [columns, setColumns] = useState(columnsFromBackend);
     const [todos, setTodos] = useState([]);
+
+    // local storage
+    useEffect(() => {
+      const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+      if (storageTodos) {
+        setTodos(storageTodos);
+      }
+    }, []);
+
+    useEffect(() => {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+    }, [todos]);
 
     function addTodo(todo) {
       // adds new todo to beginning of todos array

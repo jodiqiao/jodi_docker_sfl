@@ -4,11 +4,11 @@ import Todo from "./Todo";
 
 function TodoList({ todos }) {
   return (
-    <ul>
+    <List>
       {todos.map(todo => (
         <Todo key={todo.id} todo={todo} />
       ))}
-    </ul>
+    </List>
   );
 }
 
